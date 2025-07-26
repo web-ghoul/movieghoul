@@ -7,7 +7,6 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { MenuProvider } from 'react-native-popup-menu';
 import 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
 import { Provider } from 'react-redux';
 import "./global.css";
@@ -29,18 +28,12 @@ export default function RootLayout() {
       <MenuProvider>
         <AppProvider>
           <ThemeProvider value={DarkTheme}>
-            <SafeAreaView
-              style={{ flex: 1 }}
-              edges={['bottom']}
-              className="bg-primary_bg"
-            >
-              <Stack>
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                <Stack.Screen name="splash" options={{ headerShown: false }} />
-              </Stack>
-              <BackDrop />
-              <StatusBar style="light" />
-            </SafeAreaView>
+            <Stack>
+              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Stack.Screen name="splash" options={{ headerShown: false }} />
+            </Stack>
+            <BackDrop />
+            <StatusBar translucent style="light" />
             <Toast />
           </ThemeProvider>
         </AppProvider>

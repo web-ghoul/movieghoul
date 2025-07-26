@@ -8,7 +8,7 @@ const Header = () => {
     const categories = ["All", "Romance", "Sport", "Kids", "Action", "Drama", "Herror"]
 
     return (
-        <BlurView intensity={25} tint="dark" className='bg-[#222] rounded-full p-2 top-[40px] m-auto z-[1000] glassy' style={{ width: width * 0.85 }}>
+        <BlurView intensity={100} tint="dark" className='bg-[#222] rounded-full p-2 top-[40px] m-auto z-[1000] glassy' style={{ width: width * 0.85 }}>
             <ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
