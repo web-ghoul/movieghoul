@@ -6,10 +6,15 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { Tabs } from 'expo-router';
 import { TouchableWithoutFeedback, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function TabLayout() {
     return (
-        <>
+        <SafeAreaView
+            style={{ flex: 1 }}
+            edges={['left', 'right', 'bottom']}
+            className="bg-primary_bg"
+        >
             <Header />
             <Tabs screenOptions={{
                 tabBarActiveTintColor: "#F2C94C",
@@ -73,6 +78,6 @@ export default function TabLayout() {
                     }}
                 />
             </Tabs>
-        </>
+        </SafeAreaView>
     );
 }
